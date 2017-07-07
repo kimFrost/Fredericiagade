@@ -5,16 +5,19 @@ using System.Collections.Generic;
 
 public class FredericiagadeTarget : TargetRules
 {
-	public FredericiagadeTarget(TargetInfo Target)
-	{
+	public FredericiagadeTarget(TargetInfo Target) : base(Target)
+    {
 		Type = TargetType.Game;
-	}
 
-	//
-	// TargetRules interface.
-	//
+        ExtraModuleNames.AddRange(new string[] { "Fredericiagade" });
+    }
 
-	public override void SetupBinaries(
+    //
+    // TargetRules interface.
+    //
+
+    /*
+    public override void SetupBinaries(
 		TargetInfo Target,
 		ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
 		ref List<string> OutExtraModuleNames
@@ -22,4 +25,5 @@ public class FredericiagadeTarget : TargetRules
 	{
 		OutExtraModuleNames.AddRange( new string[] { "Fredericiagade" } );
 	}
+    */
 }
